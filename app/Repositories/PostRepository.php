@@ -14,10 +14,10 @@ class PostRepository
         $this->post = $post;
 
     }
-    
+
     public function show()
     {
-        return $this->post->with('comments')->get();
+        return $this->post->with('comments')->latest()->get();
 
     }
 

@@ -18,7 +18,7 @@
     <div class="col-md-12 bootstrap snippets">
         <div class="panel">
             <div class="panel-body">
-                <form action="{{route('create-post')}}" method="post">
+                <form action="{{route('create_post')}}" method="post">
                     @csrf
                 <textarea class="form-control" required name="post" rows="2" placeholder="What are you thinking?"></textarea>
                 <div class="mar-top clearfix">
@@ -57,7 +57,7 @@
                         @endif
                         @endif
                         <div>
-                            <form action="{{route('get-comments',[$post['id']])}}" method="post">
+                            <form action="{{route('get_comments',[$post['id']])}}" method="post">
                                 @csrf
                                 <textarea class="form-control" name="comment" required rows="2" placeholder="What are you thinking?"></textarea>
                                 <div class="mar-top clearfix">
