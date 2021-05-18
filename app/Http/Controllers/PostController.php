@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    protected $postService;
+    protected $postService,$data;
     public function __construct( PostService $postService)
     {
         $this->postService = $postService;
@@ -22,7 +22,12 @@ class PostController extends Controller
     public function createPost(Request $request) // create new post and redirect to home.
     {
         $data = $request->all();
-       $this->postService->store($data);
+        $this->postService->store($data);
+
+//        $this->data = $request->all();
+
+//       $this->postService->store($this->>data);
+
        return redirect()->route('home');
     }
 }

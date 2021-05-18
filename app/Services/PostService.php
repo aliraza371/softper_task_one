@@ -18,11 +18,6 @@ class PostService
         return $this->postRepository->show();
     }
 
-    public function getPostById($id)
-    {
-        $posts = $this->postRepository->getPostById($id);
-        return $posts;
-    }
 
     public function store($request)
     {

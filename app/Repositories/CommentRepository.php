@@ -16,6 +16,6 @@
 
      public function store($data,$id)
      {
-         $this->comment->create(['comment'=>$data, 'post_id'=>$id]);
+         return $this->comment->create(['comment'=>$data, 'post_id'=> $id]);
      }
  }

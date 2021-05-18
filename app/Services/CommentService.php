@@ -15,9 +15,7 @@
      public function store($request,$id)
      {
          $comment = $request->comment;
-
          $this->commentRepository->store($comment,$id);
-
      }
 
  }

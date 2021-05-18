@@ -17,6 +17,8 @@ use \App\Http\Controllers\CommentController;
 Route::get('/', [PostController::class,'index'])->name('home');
 
 Route::post('/create-posts',[PostController::class,'createPost'])->name('create_post');
+
+
 Route::get('/posts/{ id}', [PostController::class,'getPostById']);
 
 Route::post('/get-comments/{id}',[CommentController::class,'store'])->name('get_comments');
