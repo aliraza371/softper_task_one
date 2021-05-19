@@ -1,21 +1,22 @@
 <?php
- namespace App\Services;
 
- use App\Repositories\CommentRepository;
+namespace App\Services;
 
- class CommentService
- {
-     protected $commentRepository;
+use App\Repositories\CommentRepository;
 
-     public function __construct(CommentRepository $commentRepository)
-     {
-      $this->commentRepository = $commentRepository;
-     }
+class CommentService
+{
+    protected $commentRepository;
 
-     public function store($request,$id)
-     {
-         $comment = $request->comment;
-         $this->commentRepository->store($comment,$id);
-     }
+    public function __construct(CommentRepository $commentRepository)
+    {
+        $this->commentRepository = $commentRepository;
+    }
 
- }
+    public function store($request, $id)
+    {
+        $comment = $request->comment;
+        $this->commentRepository->store($comment, $id);
+    }
+
+}

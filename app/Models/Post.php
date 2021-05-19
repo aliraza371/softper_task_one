@@ -10,6 +10,7 @@ class Post extends Model
 {
     use HasFactory;
     use softDeletes;
+
     protected $fillable = ['post'];
 
     public function comments()

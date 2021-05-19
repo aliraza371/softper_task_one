@@ -29,8 +29,8 @@ class PostRepository
 
     public function getPostById($id)
     {
-        $post = $this->post->findOrFail($id);
-        return $post;
+        return $this->post->findOrFail($id);
+
     }
 
     public function destroy($id)

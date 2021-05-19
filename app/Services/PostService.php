@@ -10,14 +10,13 @@ class PostService
 
     public function __construct(PostRepository $postRepository)
     {
-     $this->postRepository = $postRepository;
+        $this->postRepository = $postRepository;
     }
 
     public function show()
     {
         return $this->postRepository->show();
     }
-
 
     public function store($request)
     {
